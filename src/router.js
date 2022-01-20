@@ -4,6 +4,7 @@ import { createStackNavigator} from '@react-navigation/stack';
 
 import Home from './pages/Home';
 import Detail from './pages/Detail';
+import Login from './pages/Login';
 import { Text } from 'react-native';
 
 const Stack = createStackNavigator();
@@ -13,12 +14,16 @@ function Routes(){
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen
-                name="Home"
-                component={Home}
+                name="Datail"
+                component={Detail}
                 options={{ headerShown: false}}
                 />
                 <Stack.Screen
                 name="Detail"
+                component={Home}
+                />
+                <Stack.Screen
+                name="Login"
                 component={Detail}
                 />
             </Stack.Navigator>

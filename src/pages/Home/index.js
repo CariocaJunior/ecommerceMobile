@@ -8,6 +8,7 @@ import Burguers from '../../components/Burguers';
 export default function Home() {
  return (
    <View>
+
        <View style={StyleSheet.header}>
          <Image
          source={require('../../assets/logomb.png')}
@@ -22,7 +23,7 @@ export default function Home() {
            <MaterialIcons
               name={"filter-list"}
               size={24}
-              color="#000"
+              color="#fff"
            />
          </TouchableOpacity>
        </View>
@@ -67,13 +68,25 @@ const styles = StyleSheet.create({
   container:{
     flex: 1,
     width: '100%',
-    backgroundColor: '#FFF',
+    backgroundColor: '#000',
+  },
+  background:{
+    flex:1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#191919'
   },
   header:{
     marginBottom: 8,
   },
   image:{
-    width: '100%', 
+    width: '70%', 
+    height: '30%',
+    alignSelf: 'center',
+    marginTop: 50,
+    aspectRatio: 1.5, 
+    resizeMode: 'contain',
+
   },
   textContainer:{
     flexDirection: 'row',
@@ -94,5 +107,15 @@ const styles = StyleSheet.create({
   line:{
     borderBottomColor: '#D8D8D8',
     borderBottomWidth: 2,
-  }
+  },
+  imageBackground: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+    alignItems: "center"
+  },
+  imageForeground: {
+    width: 250,
+    height: 250
+  },
 });
